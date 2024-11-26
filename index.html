@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionario</title>
+    <link rel="stylesheet" href="public/styles/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <main class="container">
+      <header class="header">
+        <h1>Cadastro de Funcionários</h1>
+        <button onclick="openModal()" id="new" aria-label="Incluir Novo Funcionário">Incluir</button>
+      </header>
+  
+      <section class="table-section">
+        <table>
+          <caption>Lista de Funcionários</caption>
+          <thead>
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Função</th>
+              <th scope="col">Salário</th>
+              <th scope="col" class="acao">Editar</th>
+              <th scope="col" class="acao">Excluir</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </section>
+  
+      <dialog class="modal-container">
+        <article class="modal">
+          <h2>Cadastro de Funcionário</h2>
+          <form>
+            <label for="m-nome">Nome</label>
+            <input id="m-nome" type="text" required />
+  
+            <label for="m-funcao">Função</label>
+            <input id="m-funcao" type="text" required />
+  
+            <label for="m-salario">Salário</label>
+            <input id="m-salario" type="number" required />
+            <button id="btnSalvar" type="submit">Salvar</button>
+          </form>
+        </article>
+      </dialog>
+    </main>
+    <script src="public/js/index.js"></script>
+  </body>
+  
+</html>
